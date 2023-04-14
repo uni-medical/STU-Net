@@ -76,3 +76,37 @@ class STUNetTrainer_huge(STUNetTrainer):
         if torch.cuda.is_available():
             self.network.cuda()
         self.network.inference_apply_nonlin = softmax_helper
+
+        
+class STUNetTrainer_small_ft(STUNetTrainer_small):
+    def __init__(self, plans_file, fold, output_folder=None, dataset_directory=None, batch_dice=True, stage=None,
+                 unpack_data=True, deterministic=True, fp16=False):
+
+        super().__init__(plans_file, fold, output_folder, dataset_directory, batch_dice, stage, unpack_data,
+                         deterministic, fp16)
+        self.initial_lr = 1e-3
+
+class STUNetTrainer_base_ft(STUNetTrainer_base):
+    def __init__(self, plans_file, fold, output_folder=None, dataset_directory=None, batch_dice=True, stage=None,
+                 unpack_data=True, deterministic=True, fp16=False):
+
+        super().__init__(plans_file, fold, output_folder, dataset_directory, batch_dice, stage, unpack_data,
+                         deterministic, fp16)
+        self.initial_lr = 1e-3
+
+
+class STUNetTrainer_large_ft(STUNetTrainer_large):
+    def __init__(self, plans_file, fold, output_folder=None, dataset_directory=None, batch_dice=True, stage=None,
+                 unpack_data=True, deterministic=True, fp16=False):
+
+        super().__init__(plans_file, fold, output_folder, dataset_directory, batch_dice, stage, unpack_data,
+                         deterministic, fp16)
+        self.initial_lr = 1e-3
+
+class STUNetTrainer_huge_ft(STUNetTrainer_huge):
+    def __init__(self, plans_file, fold, output_folder=None, dataset_directory=None, batch_dice=True, stage=None,
+                 unpack_data=True, deterministic=True, fp16=False):
+
+        super().__init__(plans_file, fold, output_folder, dataset_directory, batch_dice, stage, unpack_data,
+                         deterministic, fp16)
+        self.initial_lr = 1e-3
