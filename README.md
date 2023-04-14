@@ -25,3 +25,10 @@ copy run_finetuning.py nnunet/run/
 | STU-Net-B | 128x128x128 | 58.26M | 0.51T | [model](https://pan.baidu.com/s/1a17XmOGiGSgbEvK-acSOSg?pwd=91w3) |
 | STU-Net-L | 128x128x128 | 440.30M | 3.81T | [model](https://pan.baidu.com/s/1WOLoTrzCLYyJXZnITGK6jg?pwd=91pt) |
 | STU-Net-H | 128x128x128 | 1457.33M | 12.60T | [model](https://pan.baidu.com/s/1CinTvceZuvdEEWGcaJEuEA?pwd=bk9n) |
+
+### Fine-tuning on downstream tasks
+To perform fine-tuning on downstream tasks, use the following command with the base model as an example:
+```
+python run_finetuning.py 3d_fullres STUNetTrainer_base_ft TASKID FOLD -pretrained_weights MODEL
+```
+Please note that you may need to adjust the learning rate according to the specific downstream task. To do this, modify the learning rate in the corresponding Trainer (e.g., STUNetTrainer_base_ft) for the task.
