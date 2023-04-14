@@ -21,7 +21,7 @@ copy run_finetuning.py nnunet/run/
 
 | name | crop size | #params | FLOPs | model |
 |:---:|:---:|:---:|:---:| :---:|
-| STU-Net-S | 128x128x128 | 14.6M | 0.13T | Coming soon |
-| STU-Net-B | 128x128x128 | 58.26M | 0.51T | Coming soon |
-| STU-Net-L | 128x128x128 | 440.30M | 3.81T | Coming soon |
-| STU-Net-H | 128x128x128 | 1457.33M | 12.60T | Coming soon |
+| STU-Net-S | 128x128x128 | 14.6M | 0.13T | [model](https://pan.baidu.com/s/1ZBfOhaTvjvhcgXKGNe_gWg?pwd=soz7) |
+| STU-Net-B | 128x128x128 | 58.26M | 0.51T | [model](https://pan.baidu.com/s/1a17XmOGiGSgbEvK-acSOSg?pwd=91w3) |
+| STU-Net-L | 128x128x128 | 440.30M | 3.81T | [model](https://pan.baidu.com/s/1WOLoTrzCLYyJXZnITGK6jg?pwd=91pt) |
+| STU-Net-H | 128x128x128 | 1457.33M | 12.60T | [model](https://pan.baidu.com/s/1CinTvceZuvdEEWGcaJEuEA?pwd=bk9n) |
