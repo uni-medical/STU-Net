@@ -1,5 +1,7 @@
 # STU-Net
 Scalable and Transferable Medical Image Segmentation Models Enpowered by Large-scale Supervised Pre-training
+
+[[`arxiv Paper`](https://arxiv.org/abs/2304.06716)]
 <p float="left">
   <img src="assets/fig_bubble.png?raw=true" width="47.5%" />
   <img src="assets/fig_model.png?raw=true" width="47.5%" /> 
@@ -23,4 +25,3 @@ copy run_finetuning.py nnunet/run/
 | STU-Net-B | 128x128x128 | 58.26M | 0.51T | Coming soon |
 | STU-Net-L | 128x128x128 | 440.30M | 3.81T | Coming soon |
 | STU-Net-H | 128x128x128 | 1457.33M | 12.60T | Coming soon |
-
