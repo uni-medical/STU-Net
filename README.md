@@ -33,6 +33,20 @@ python run_finetuning.py 3d_fullres STUNetTrainer_base_ft TASKID FOLD -pretraine
 ```
 Please note that you may need to adjust the learning rate according to the specific downstream task. To do this, modify the learning rate in the corresponding Trainer (e.g., STUNetTrainer_base_ft) for the task.
 
+# Acknowledgements
+
+This project would like to express our gratitude to the following resources for their contributions:
+
+1. **[TotalSegmentator Dataset](https://github.com/wasserth/TotalSegmentator)**: We would like to thank the creators and maintainers of the TotalSegmentator dataset for providing such a large-scale and comprehensive dataset, which greatly facilitated our research and development process.
+
+2. **[nnU-Net](https://github.com/MIC-DKFZ/nnUNet)**: Our code is based on the nnU-Net framework. We sincerely appreciate the developers for sharing their code and providing a solid foundation for our work.
+
+3. We appreciate the providers of numerous public datasets used in our paper, which allowed us to evaluate our pre-trained models effectively. We would like to express our special gratitude to the organizers of the following MICCAI 2022 challenges, which provided valuable resources for our fine-tuning experiments:
+   - [FLARE22](https://flare22.grand-challenge.org/)
+   - [AMOS22](https://amos22.grand-challenge.org/Home/)
+   - [AutoPET](https://autopet.grand-challenge.org/)
+
+
 # Citations
 If you find this repository useful, please consider citing our paper:
 ```
