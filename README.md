@@ -69,7 +69,7 @@ For much faster inference speed with minimal performance loss, it is recommended
 ```
 nnUNet_predict -i INPUT_PATH -o OUTPUT_PATH -t 101 -m 3d_fullres -f 0 -tr STUNetTrainer_base  -chk base_ep4k --mode fast --disable_tta
 ```
-
+The categories corresponding to the label values can be found in the `label_orders.json` file within our repository (please note that this differs from the official TotalSegmentator version).
 # Acknowledgements
 
 This project would like to express our gratitude to the following resources for their contributions:
