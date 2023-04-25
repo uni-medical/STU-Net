@@ -59,7 +59,7 @@ To use our trained models to conduct inference on CT images, please first organi
       - huge_ep4k.model
       - huge_ep4k.model.pkl
 ```
-These pickle files can be found in the plan_files directory within this repository. You can download the models from the provided paths above and set TASKID and TASK_NAME according to your preferences.
+These pickle files can be found in the plan_files directory within this repository. You can download the models from the provided paths above and set `TASKID` and `TASK_NAME` according to your preferences.
 
 To conduct inference, you can use following command (base model for example):
 ```
