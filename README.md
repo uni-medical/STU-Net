@@ -35,7 +35,7 @@ python run_finetuning.py 3d_fullres STUNetTrainer_base_ft TASKID FOLD -pretraine
 Please note that you may need to adjust the learning rate according to the specific downstream task. To do this, modify the learning rate in the corresponding Trainer (e.g., STUNetTrainer_base_ft) for the task.
 
 ## Using Our Models for Inference
-To use our trained models to conduct inference on CT images, please first organize the file structures in your RESULTS_FOLDER/nnUNet/3d_fullres/ as follows:
+To use our trained models to conduct inference on CT images, please first organize the file structures in your `RESULTS_FOLDER/nnUNet/3d_fullres/` as follows:
 ```
 - Task101_TotalSegmentator/
   - STUNetTrainer_small__nnUNetPlansv2.1/
