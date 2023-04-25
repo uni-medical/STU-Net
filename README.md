@@ -8,7 +8,7 @@ Scalable and Transferable Medical Image Segmentation Models Enpowered by Large-s
 </p>
 
 # Environments and Requirements:
-Our models are built based on [nnUNetV1](https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1). You should meet the requirements of nnUNet.
+Our models are built based on [nnUNetV1](https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1). Please ensure that you meet the requirements of nnUNet.
 Copy the following files in this repo to your nnUNet repository.
 ```
 copy /network_training/* nnunet/training/network_training/
@@ -17,7 +17,8 @@ copy run_finetuning.py nnunet/run/
 ```
 
 # Pre-trained Models:
-## TotalSegmentator Trainer Models
+## TotalSegmentator trained Models
+These models are trained on TotalSegmentator dataset by 4000 epochs with mirror data augmentation
 
 | Model Name | Crop Size | #Params | FLOPs | Download Link |
 |:------:|:-------:|:-----:|:---------:| :-------|
@@ -26,12 +27,48 @@ copy run_finetuning.py nnunet/run/
 | STU-Net-L | 128x128x128 | 440.30M | 3.81T | [Baidu Netdisk](https://pan.baidu.com/s/1WOLoTrzCLYyJXZnITGK6jg?pwd=91pt) \| [Google Drive](https://drive.google.com/file/d/1KA1eXWWf_xAoJg5KHYrxTmfiz7wxGhHS/view?usp=share_link)|
 | STU-Net-H | 128x128x128 | 1457.33M | 12.60T | [Baidu Netdisk](https://pan.baidu.com/s/1CinTvceZuvdEEWGcaJEuEA?pwd=bk9n) \| [Google Drive](https://drive.google.com/file/d/1Qrq7oGPJ7ileFHWOAxwpeWdaB6hySptU/view?usp=share_link)|
 
-### Fine-tuning on downstream tasks
+## Fine-tuning on downstream tasks
 To perform fine-tuning on downstream tasks, use the following command with the base model as an example:
 ```
 python run_finetuning.py 3d_fullres STUNetTrainer_base_ft TASKID FOLD -pretrained_weights MODEL
 ```
 Please note that you may need to adjust the learning rate according to the specific downstream task. To do this, modify the learning rate in the corresponding Trainer (e.g., STUNetTrainer_base_ft) for the task.
+
+## Using
+To use our trained models to conduct inference on CT images, please first organize the file structures in your RESULTS_FOLDER/nnUNet/3d_fullres/ as follows:
+```
+- Task101_TotalSegmentator/
+  - STUNetTrainer_small__nnUNetPlansv2.1/
+    - plans.pkl
+    - fold_0/
+      - small_ep4k.model
+      - small_ep4k.model.pkl
+  - STUNetTrainer_base__nnUNetPlansv2.1/
+    - plans.pkl
+    - fold_0/
+      - base_ep4k.model
+      - base_ep4k.model.pkl
+  - STUNetTrainer_large__nnUNetPlansv2.1/
+    - plans.pkl
+    - fold_0/
+      - large_ep4k.model
+      - large_ep4k.model.pkl
+  - STUNetTrainer_huge__nnUNetPlansv2.1/
+    - plans.pkl
+    - fold_0/
+      - huge_ep4k.model
+      - huge_ep4k.model.pkl
+```
+These pickle files are included in this repository. You can set TASKID and TASK_NAME according to your preferences.
+
+To conduct inference using base model, you can use following command (base model for example):
+```
+nnUNet_predict -i INPUT_PATH -o OUTPUT_PATH -t 101 -m 3d_fullres -f 0 -tr STUNetTrainer_base  -chk base_ep4k
+```
+For faster inference speed with minimal performance loss, it is recommended to use the following command:
+```
+nnUNet_predict -i INPUT_PATH -o OUTPUT_PATH -t 101 -m 3d_fullres -f 0 -tr STUNetTrainer_base  -chk base_ep4k --mode fast --disable_tta
+```
 
 # Acknowledgements
 
