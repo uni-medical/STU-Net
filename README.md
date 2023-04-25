@@ -61,7 +61,7 @@ To use our trained models to conduct inference on CT images, please first organi
 ```
 These pickle files are included in this repository. You can set TASKID and TASK_NAME according to your preferences.
 
-To conduct inference using base model, you can use following command (base model for example):
+To conduct inference, you can use following command (base model for example):
 ```
 nnUNet_predict -i INPUT_PATH -o OUTPUT_PATH -t 101 -m 3d_fullres -f 0 -tr STUNetTrainer_base  -chk base_ep4k
 ```
