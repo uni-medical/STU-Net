@@ -28,8 +28,14 @@
 
 
 ## Get Started
+### Installation
 Our models are built based on [nnUNetV1](https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1). Please ensure that you meet the requirements of nnUNet.
-Copy the following files in this repo to your nnUNet repository.
+```
+git clone https://github.com/Ziyan-Huang/STU-Net.git
+cd nnUNet-1.7.1
+pip install -e .
+```
+If you have installed nnUNetv1 already. You can just copy the following files in this repo to your nnUNet repository.
 ```
 copy /network_training/* nnunet/training/network_training/
 copy /network_architecture/* nnunet/network_architecture/
