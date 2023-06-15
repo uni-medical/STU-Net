@@ -101,7 +101,7 @@ The categories corresponding to the label values can be found in the [label_orde
 If you have any question, feel free to contact ziyanhuang@sjtu.edu.cn.
 
 ## 🛡️ License
-This project is under the CC-BY-NC 4.0 license. See [LICENSE](LICENSE) for details.
+This project is under the Apache License 2.0 license. See [LICENSE](LICENSE) for details.
 
 ## 🙏 Acknowledgement
 Our code is based on the [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) framework. 
