@@ -33,7 +33,8 @@ We use TotalSegmentator dataset which contains 1204 images with 104 anatomical s
 ## Get Started
 ### Main Requirements
 > torch==1.10  
-> nnUNet==1.7.0
+> nnUNet==1.7.0  
+> torchinfo
 ### Installation
 Our models are built based on [nnUNet V1](https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1). Please ensure that you meet the requirements of nnUNet.
 ```
