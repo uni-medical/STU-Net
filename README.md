@@ -85,7 +85,7 @@ To use our trained models to conduct inference on CT images, please first organi
       - huge_ep4k.model
       - huge_ep4k.model.pkl
 ```
-These pickle files can be found in the plan_files directory within this repository. You can download the models from the provided paths above and set `TASKID` and `TASK_NAME` according to your preferences.
+These pickle files can be found in the [plan_files](plan_files) directory within this repository. You can download the models from the provided paths above and set `TASKID` and `TASK_NAME` according to your preferences.
 
 To conduct inference, you can use following command (base model for example):
 ```
@@ -95,7 +95,7 @@ For much faster inference speed with minimal performance loss, it is recommended
 ```
 nnUNet_predict -i INPUT_PATH -o OUTPUT_PATH -t 101 -m 3d_fullres -f 0 -tr STUNetTrainer_base  -chk base_ep4k --mode fast --disable_tta
 ```
-The categories corresponding to the label values can be found in the `label_orders.json` file within our repository (please note that this differs from the official TotalSegmentator version).
+The categories corresponding to the label values can be found in the [`label_orders`](label_orders.json) file within our repository (please note that this differs from the official TotalSegmentator version).
 
 ## 🙋‍♀️ Feedback and Contact
 If you have any question, feel free to contact ziyanhuang@sjtu.edu.cn.
