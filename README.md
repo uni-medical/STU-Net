@@ -1,7 +1,7 @@
 # STU-Net
 **STU-Net: Scalable and Transferable Medical Image Segmentation Models Empowered by Large-Scale Supervised Pre-training** \
 *Ziyan Huang, Haoyu Wang, Zhongying Deng, Jin Ye, Yanzhou Su, Hui Sun, Junjun He, Yun Gu, Lixu Gu, Shaoting Zhang, Yu Qiao* \
-[Apr. 13, 2023] [arXiv, 2023] \
+[Apr. 13, 2023] [arXiv, 2023] 
 <p float="left">
   <img src="assets/fig_bubble.png?raw=true" width="47.5%" />
   <img src="assets/fig_model.png?raw=true" width="47.5%" /> 
