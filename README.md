@@ -21,7 +21,7 @@
 >Large-scale models pre-trained on large-scale datasets have profoundly advanced the development of deep learning. However, the state-of-the-art models for medical image segmentation are still small-scale, with their parameters only in the tens of millions. Further scaling them up to higher orders of magnitude is rarely explored. An overarching goal of exploring large-scale models is to train them on large-scale medical segmentation datasets for better transfer capacities. In this work, we design a series of Scalable and Transferable U-Net (STU-Net) models, with parameter sizes ranging from 14 million to 1.4 billion. Notably, the 1.4B STU-Net is the largest medical image segmentation model to date. Our STU-Net is based on nnU-Net framework due to its popularity and impressive performance. We first refine the default convolutional blocks in nnU-Net to make them scalable. Then, we empirically evaluate different scaling combinations of network depth and width, discovering that it is optimal to scale model depth and width together. We train our scalable STU-Net models on a large-scale TotalSegmentator dataset and find that increasing model size brings a stronger performance gain. This observation reveals that a large model is promising in medical image segmentation. Furthermore, we evaluate the transferability of our model on 14 downstream datasets for direct inference and 3 datasets for further fine-tuning, covering various modalities and segmentation targets. We observe good performance of our pre-trained model in both direct inference and fine-tuning.
 
 ## Dataset Links
-We use 1 dataset for pre-training and 3 datasets as the downstream tasks for further fine-tuning.
+We use TotalSegmentator dataset which contains 1204 images with 104 anatomical structures (consisting of 27 organs, 59 bones, 10 muscles and 8 vessels) for pre-training and 3 MICCAI 2022 challenge datasets as the downstream tasks for further fine-tuning.
 ### Pre-training
 - [TotalSegmentator](https://github.com/wasserth/TotalSegmentator)
 ### Fine-tuning
@@ -31,6 +31,9 @@ We use 1 dataset for pre-training and 3 datasets as the downstream tasks for fur
 
 
 ## Get Started
+### Main Requirements
+> torch==1.10  
+> nnUNet==1.7.0
 ### Installation
 Our models are built based on [nnUNet V1](https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1). Please ensure that you meet the requirements of nnUNet.
 ```
