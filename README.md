@@ -9,7 +9,7 @@
 
 ## Key Features
 - **Scalability**: STU-Net is designed for scalability, offering models of various sizes (S, B, L, H), including STU-Net-H, the largest medical image segmentation model to date with 1.4B parameters.
-- **Transferability**: STU-Net is pre-trained on a large-scale TotalSegmentator dataset and is capable of being fine-tuned for various downstream tasks.
+- **Transferability**: STU-Net is pre-trained on a large-scale TotalSegmentator dataset (>100k annotations) and is capable of being fine-tuned for various downstream tasks.
 - **Baed on nnU-Net**: Built upon the widely recognized nnUNet framework, STU-Net provides a robust and validated foundation for medical image segmentation.
 
 ## Links
