@@ -29,7 +29,7 @@
 
 ## Get Started
 ### Installation
-Our models are built based on [nnUNetV1](https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1). Please ensure that you meet the requirements of nnUNet.
+Our models are built based on [nnUNet V1](https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1). Please ensure that you meet the requirements of nnUNet.
 ```
 git clone https://github.com/Ziyan-Huang/STU-Net.git
 cd nnUNet-1.7.1
