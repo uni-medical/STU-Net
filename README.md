@@ -149,10 +149,12 @@ Our code is based on the [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) framework
 ## 📝 Citation
 If you find this repository useful, please consider citing our paper:
 ```
-@article{huang2023stu,
-  title={STU-Net: Scalable and Transferable Medical Image Segmentation Models Empowered by Large-Scale Supervised Pre-training},
-  author={Huang, Ziyan and Wang, Haoyu and Deng, Zhongying and Ye, Jin and Su, Yanzhou and Sun, Hui and He, Junjun and Gu, Yun and Gu, Lixu and Zhang, Shaoting and Qiao, Yu},
-  journal={arXiv preprint arXiv:2304.06716},
-  year={2023}
+@misc{huang2023stunet,
+      title={STU-Net: Scalable and Transferable Medical Image Segmentation Models Empowered by Large-Scale Supervised Pre-training}, 
+      author={Ziyan Huang and Haoyu Wang and Zhongying Deng and Jin Ye and Yanzhou Su and Hui Sun and Junjun He and Yun Gu and Lixu Gu and Shaoting Zhang and Yu Qiao},
+      year={2023},
+      eprint={2304.06716},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
