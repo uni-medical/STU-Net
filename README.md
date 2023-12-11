@@ -7,6 +7,14 @@
   <img src="assets/fig_model.png?raw=true" width="47.5%" /> 
 </p>
 
+## News
+- STU-Net won the championship at the MICCAI 2023 ATLAS Challenge. [leaderboard](https://atlas-challenge.u-bourgogne.fr/leaderboard)
+- STU-Net won the championship at the MICCAI 2023 SPPIN Challenge. [leaderboard](https://sppin.grand-challenge.org/evaluation/final-test-phase/leaderboard/)
+- STU-Net was the runner-up at the MICCAI 2023 AutoPET II Challenge (Highest DSC value). [leaderboard](https://autopet-ii.grand-challenge.org/leaderboard/)
+- At the MICCAI 2023 BraTS2023 competition, STU-Net secured one runner-up and two third-place finishes. [BraTS23](https://www.synapse.org/#!Synapse:syn51156910/wiki/622343)
+- STU-Net took third place at the FLARE 2023 competition. [leaderboard](https://codalab.lisn.upsaclay.fr/competitions/12239#learn_the_details-awards)
+ 
+
 ## Key Features
 - **Scalability**: STU-Net is designed for scalability, offering models of various sizes (S, B, L, H), including STU-Net-H, the largest medical image segmentation model to date with 1.4B parameters.
 - **Transferability**: STU-Net is pre-trained on a large-scale TotalSegmentator dataset (>100k annotations) and is capable of being fine-tuned for various downstream tasks.
