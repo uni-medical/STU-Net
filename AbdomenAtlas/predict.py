@@ -26,7 +26,7 @@ def run_nnUNet_predict(input_folder, output_folder, trainer):
         "-o", output_folder,
         "-t", "200",  
         "-m", "3d_fullres",  
-        "-tr", tr,
+        "-tr", trainer,
         "-f", "all"
     ]
     subprocess.run(command, check=True)
