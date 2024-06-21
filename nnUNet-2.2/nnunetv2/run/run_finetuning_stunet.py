@@ -48,6 +48,12 @@ def load_stunet_pretrained_weights(network, fname, verbose=False):
     pretrained_dict = {k: v for k, v in pretrained_dict.items()
                        if k in model_dict.keys() and all([i not in k for i in skip_strings_in_pretrained])}
 
+    # Adjust for multimodal inputs
+    num_inputs = model_dict['conv_blocks_context.0.0.conv1.weight'].shape[1]
+    if num_inputs > 1:
+        pretrained_dict['conv_blocks_context.0.0.conv1.weight'] = pretrained_dict['conv_blocks_context.0.0.conv1.weight'].repeat(1, num_inputs, 1, 1, 1)
+        pretrained_dict['conv_blocks_context.0.0.conv3.weight'] = pretrained_dict['conv_blocks_context.0.0.conv3.weight'].repeat(1, num_inputs, 1, 1, 1)
+
     model_dict.update(pretrained_dict)
 
     print("################### Loading pretrained weights from file ", fname, '###################')
