@@ -83,6 +83,12 @@ git clone https://github.com/Ziyan-Huang/STU-Net.git
 cd nnUNet-1.7.1
 pip install -e .
 ```
+We now support [nnUNetv2](https://github.com/MIC-DKFZ/nnUNet)! You can install it using the following command.
+```
+git clone https://github.com/Ziyan-Huang/STU-Net.git
+cd nnUNet-2.2
+pip install -e .
+```
 If you have installed nnUNetv1 already. You can just copy the following files in this repo to your nnUNet repository.
 ```
 copy /network_training/* nnunet/training/network_training/
@@ -105,6 +111,18 @@ These models are trained on TotalSegmentator dataset by 4000 epochs with mirror 
 To perform fine-tuning on downstream tasks, use the following command with the base model as an example:
 ```
 python run_finetuning.py 3d_fullres STUNetTrainer_base_ft TASKID FOLD -pretrained_weights MODEL
+```
+For fine-tuning nnUNetv2, you can execute the program using the following command.
+```
+python nnunetv2/run/run_finetuning_stunet.py Datasetxxx 3d_fullres 1 -pretrained_weights MODEL -tr STUNetTrainer_base_ft 
+```
+If we wish to start training from scratch, we can use the following command.
+```
+python nnunetv2/run/run_training.py Datasetxxx 3d_fullres 1  -tr STUNetTrainer_base
+```
+If we wish to continue training from previously trained weights, run this command.
+```
+python nnunetv2/run/run_training.py Datasetxxx 3d_fullres 1  -tr STUNetTrainer_base --c
 ```
 Please note that you may need to adjust the learning rate according to the specific downstream task. To do this, modify the learning rate in the corresponding Trainer (e.g., STUNetTrainer_base_ft) for the task.
 
