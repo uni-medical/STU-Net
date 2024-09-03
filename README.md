@@ -114,15 +114,15 @@ python run_finetuning.py 3d_fullres STUNetTrainer_base_ft TASKID FOLD -pretraine
 ```
 For fine-tuning nnUNetv2, you can execute the program using the following command.
 ```
-python nnunetv2/run/run_finetuning_stunet.py Datasetxxx 3d_fullres 1 -pretrained_weights MODEL -tr STUNetTrainer_base_ft 
+python nnunetv2/run/run_finetuning_stunet.py Datasetxxx 3d_fullres FOLD -pretrained_weights MODEL -tr STUNetTrainer_base_ft 
 ```
 If we wish to start training from scratch, we can use the following command.
 ```
-python nnunetv2/run/run_training.py Datasetxxx 3d_fullres 1  -tr STUNetTrainer_base
+python nnunetv2/run/run_training.py Datasetxxx 3d_fullres FOLD  -tr STUNetTrainer_base
 ```
 If we wish to continue training from previously trained weights, run this command.
 ```
-python nnunetv2/run/run_training.py Datasetxxx 3d_fullres 1  -tr STUNetTrainer_base --c
+python nnunetv2/run/run_training.py Datasetxxx 3d_fullres FOLD  -tr STUNetTrainer_base --c
 ```
 Please note that you may need to adjust the learning rate according to the specific downstream task. To do this, modify the learning rate in the corresponding Trainer (e.g., STUNetTrainer_base_ft) for the task.
 
