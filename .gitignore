@@ -1,0 +1,90 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Ignore build folders except in HECKTOR2025-MEDAI
+build/
+!HECKTOR2025-MEDAI/**/build/
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# nnUNet Data - Exclude large datasets and models
+nnUNet_data/
+data/
+*.nii
+*.nii.gz
+*.npz
+
+# Model files - Very large
+*.model
+*.ckpt
+
+# Model weights (large files) - exclude .pth but allow config JSONs
+*.pth
+*.pt
+
+# Keep model config files (exclude only the weights)
+# STUNetTrainer_small__nnUNetPlans__3d_fullres/ contains:
+#   - dataset.json, plans.json, dataset_fingerprint.json (KEEP - small config files)
+#   - fold_*/checkpoint_final.pth (EXCLUDE - large ~112MB each)
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Reports and output
+input_data/
+output_data/
+visualizations/
+results/
+results_2/
+
+# Downloaded model repos (can be re-cloned if needed)
+hecktor_2020/
+
+# Large weight files inside HECKTOR2025-MEDAI
+HECKTOR2025-MEDAI/weights/
+
+
+# Model weights (large files)
+*.pt
+*.zip

@@ -1,0 +1,18 @@
+{
+    "description": "hecktor segmentation",
+    "labels": {
+        "background": 0,
+        "GTVp": 1,
+        "GTVn": 2
+    },
+    "licence": "touch it and you die",
+    "name": "Dataset104_Task1_crop",
+    "numTraining": 680,
+    "reference": "f off, this is private",
+    "release": "0.0",
+    "channel_names": {
+        "0": "CT",
+        "1": "PET"
+    },
+    "file_ending": ".nii.gz"
+}

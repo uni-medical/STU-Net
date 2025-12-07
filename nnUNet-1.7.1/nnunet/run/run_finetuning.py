@@ -13,7 +13,7 @@ def load_pretrained_weights(network, fname, verbose=True):
     """
     THIS DOES NOT TRANSFER SEGMENTATION HEADS!
     """
-    saved_model = torch.load(fname)
+    saved_model = torch.load(fname, weights_only=False)
     pretrained_dict = saved_model['state_dict']
 
     new_state_dict = {}
